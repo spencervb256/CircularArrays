@@ -25,8 +25,8 @@ namespace Lab6
             queueRear = 0;
             max = size;
             count = 0;
-            
-            
+
+
         }
         // NYI fully.  
         public void AddBack(T value)  //addBack is enqueue
@@ -48,10 +48,24 @@ namespace Lab6
 
         }
 
+        public void delete()
+        {
+            if (count == 0)
+            {
+                Console.WriteLine("Queue is Empty");
+            }
+            else
+            {
+                Console.WriteLine("The following was just removed : " + array[queueFront]);
 
-        
-       
-        public T RemoveFront() 
+                queueFront = (queueFront + 1) % max;
+
+                count--;
+            }
+        }
+
+
+        /*public T RemoveFront()
         {
 
             if (array != null)
@@ -78,6 +92,8 @@ namespace Lab6
             return default;
 
         }
+
+    */
 
         // Just returns the front element O(1)
         public T GetFront()

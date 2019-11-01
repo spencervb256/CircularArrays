@@ -16,9 +16,7 @@ namespace Lab6
             Demo = new CircularArray<String>(numelemnts);
 
             Demo.AddBack("Richard");
-            Demo.GetFront();
-            String deleted = Demo.RemoveFront();
-            Console.WriteLine("The following was just removed: " + deleted);
+            Demo.delete();
             //Demo.removeFront(); works by itself on a line, the result just doesn't go anywhere.  
             Demo.AddBack("Brian");
             Demo.AddBack("Bonnie");

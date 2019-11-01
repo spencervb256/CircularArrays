@@ -16,8 +16,9 @@ namespace Lab6
             Demo = new CircularArray<String>(numelemnts);
 
             Demo.AddBack("Richard");
-            //String deleted = Demo.RemoveFront();
-            //Console.WriteLine("The following was just removed: " + deleted);
+            Demo.GetFront();
+            String deleted = Demo.RemoveFront();
+            Console.WriteLine("The following was just removed: " + deleted);
             //Demo.removeFront(); works by itself on a line, the result just doesn't go anywhere.  
             Demo.AddBack("Brian");
             Demo.AddBack("Bonnie");
@@ -27,7 +28,7 @@ namespace Lab6
             Demo.AddBack("Omar");
 
             Console.WriteLine(Demo.GetFront()); //Should print Richard
-            Demo.RemoveFront(); //***If removing this then GetFront prints nothing
+            //Demo.RemoveFront(); //***If removing this then GetFront prints nothing
             Console.WriteLine(Demo.GetFront()); //Should print Brian
             Console.ReadLine();
         }

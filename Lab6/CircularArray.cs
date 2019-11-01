@@ -88,13 +88,13 @@ namespace Lab6
             }
             else
             {
-                grow(array.Length * 2);
+                Grow(array.Length * 2);
                 GetFront();
             }
             return default;
         }
     
-        public void grow(int newsize)
+        public void Grow(int newsize)
         {
             Array.Resize(ref array, newsize);
         }

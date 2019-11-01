@@ -36,6 +36,7 @@ namespace Lab6
             {
                 WriteLine("Queue has no space");
                 return;
+                return;
             }
             else
             {

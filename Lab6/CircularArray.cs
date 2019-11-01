@@ -54,14 +54,14 @@ namespace Lab6
         public T RemoveFront() 
         {
 
-            if (array != default)
+            if (array != null)
             {
                 T sample = array[queueFront];
                 // Because technically T could be not defaultable we need to use default(T), which is default.  
                 array[queueFront] = default;
 
 
-                if (queueFront % array.Length == 0)
+                if (queueFront % array.Length != 0)
                 {
                     queueFront = (queueFront + 1) % max;
                 }
@@ -69,20 +69,20 @@ namespace Lab6
 
 
             }
-            if (array == default)
+            if (array == null)
             {
                 WriteLine("Queue is empty");
                 return default;
             }
 
             return default;
-          
+
         }
 
         // Just returns the front element O(1)
         public T GetFront()
         {
-            if (array != default)
+            if (array != null)
             {
                 return array[queueFront];
             }

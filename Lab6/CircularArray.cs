@@ -55,10 +55,10 @@ namespace Lab6
         public T RemoveFront()  //removeFront is dequeue
         {
 
-            if (array != null)
+            if (array != default)
             {
                 T sample = array[queueFront];
-                // Because technically T could be not nullable we need to use default(T), which is null.  
+                // Because technically T could be not defaultable we need to use default(T), which is default.  
                 array[queueFront] = default;
 
 
@@ -70,7 +70,7 @@ namespace Lab6
 
 
             }
-            if (array == null)
+            if (array == default)
             {
                 WriteLine("Queue is empty");
                 return default;
@@ -84,7 +84,7 @@ namespace Lab6
         public T GetFront()
         {
             //Calling this on an empty queue will probably crash too
-            if (array != null)
+            if (array != default)
             {
                 return array[queueFront];
             }

@@ -50,9 +50,8 @@ namespace Lab6
 
 
         
-        //Also Not Yet Implemented fully
-        // Note that I've made it return the value being removed, that's not strictly required but makes the most sense. 
-        public T RemoveFront()  //removeFront is dequeue
+       
+        public T RemoveFront() 
         {
 
             if (array != default)
@@ -75,7 +74,7 @@ namespace Lab6
                 WriteLine("Queue is empty");
                 return default;
             }
-            //Right now, calling this on an empty queue will crash
+
             return default;
           
         }
@@ -83,7 +82,6 @@ namespace Lab6
         // Just returns the front element O(1)
         public T GetFront()
         {
-            //Calling this on an empty queue will probably crash too
             if (array != default)
             {
                 return array[queueFront];
@@ -95,8 +93,7 @@ namespace Lab6
             }
             return default;
         }
-        // Same old Grow, bit hard to know where to use it if at all though...
-        // O(N)
+    
         public void grow(int newsize)
         {
             Array.Resize(ref array, newsize);

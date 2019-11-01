@@ -17,7 +17,7 @@ namespace Lab6
 
             Demo.AddBack("Richard");
             String deleted = Demo.RemoveFront();
-            Console.WriteLine("The following was just removed: " + deleted);
+            //Console.WriteLine("The following was just removed: " + deleted);
             //Demo.removeFront(); works by itself on a line, the result just doesn't go anywhere.  
             Demo.AddBack("Brian");
             Demo.AddBack("Bonnie");
@@ -26,6 +26,8 @@ namespace Lab6
             Demo.AddBack("Wenying");
             Demo.AddBack("Omar");
 
+            Console.WriteLine(Demo.GetFront());
+            Demo.RemoveFront();
             Console.WriteLine(Demo.GetFront());
             Console.ReadLine();
         }
